@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071326">
+    <title>StudentLife | Pressure dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas class="webgl" aria-hidden="true"></canvas>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="#dashboard" aria-label="StudentLife dashboard">
+                <span class="brand-mark">⌁</span>
+                <span><strong>StudentLife</strong><small>Less Pressure, More Progress</small></span>
+            </a>
+
+            <nav class="navigation" aria-label="Main navigation">
+                <a class="nav-link is-active" href="index.html" aria-current="page"><span class="nav-icon">◈</span>Dashboard</a>
+                <a class="nav-link" href="academics.html"><span class="nav-icon">♧</span>Academics</a>
+                <a class="nav-link" href="planner.html"><span class="nav-icon">▣</span>Study Planner</a>
+                <a class="nav-link" href="wellbeing.html"><span class="nav-icon">♡</span>Mental Health</a>
+                <a class="nav-link" href="sleep.html"><span class="nav-icon">☾</span>Sleep Tracker</a>
+                <a class="nav-link" href="goals.html"><span class="nav-icon">⚒</span>Goals</a>
+                <a class="nav-link" href="journal.html"><span class="nav-icon">▤</span>Journal</a>
+                <a class="nav-link" href="settings.html"><span class="nav-icon">⚙</span>Settings</a>
+            </nav>
+
+            <section class="encouragement" aria-label="Encouragement">
+                <div class="mountain-art" aria-hidden="true"><span>⚑</span></div>
+                <h2>You're doing<br>better than you think.</h2>
+                <p>Small steps every day<br>lead to big results.</p>
+                <a class="button button-primary button-small" href="#focus">Keep Going <span>→</span></a>
+            </section>
+        </aside>
+
+        <main class="dashboard" id="dashboard">
+            <header class="topbar">
+                <div class="welcome">
+                    <span class="sun-icon" aria-hidden="true">☼</span>
+                    <div>
+                        <h1><span id="greeting">Good morning</span>, <span id="profile-name">Chandan</span></h1>
+                        <p>Take a deep breath. You're not alone in this.</p>
+                    </div>
+                </div>
+                <div class="top-actions">
+                    <div class="date-display"><span class="action-icon">▦</span><span><strong id="today-date">09 Oct
+                                2026</strong><small id="today-time">Sat, 10:24 AM</small></span></div>
+                    <button class="icon-button notification-button" type="button"
+                        aria-label="Notifications">♧<i></i></button>
+                    <button class="profile-avatar" type="button" aria-label="Profile">C</button>
+                </div>
+            </header>
+
+            <section class="metric-grid" aria-label="Your weekly overview">
+                <article class="metric-card metric-pink">
+                    <div class="metric-icon">⌂</div>
+                    <div class="metric-content">
+                        <h2>Academic Pressure</h2>
+                        <p class="metric-value">7.5 <span>/ 10</span></p>
+                        <p class="metric-change">↑ 1.2% <span>Higher than last week</span></p>
+                    </div>
+                    <svg class="sparkline" viewBox="0 0 100 36" aria-hidden="true">
+                        <path d="M2 28 C14 25 17 13 28 18 S45 34 56 23 72 12 80 18 92 14 98 7" />
+                    </svg>
+                </article>
+                <article class="metric-card metric-purple">
+                    <div class="metric-icon">♧</div>
+                    <div class="metric-content">
+                        <h2>Mental Stress</h2>
+                        <p class="metric-value">6.8 <span>/ 10</span></p>
+                        <p class="metric-change">↑ 0.6% <span>Higher than last week</span></p>
+                    </div>
+                    <svg class="sparkline" viewBox="0 0 100 36" aria-hidden="true">
+                        <path d="M2 29 C12 24 17 30 25 20 S41 10 48 19 65 28 73 17 88 22 98 7" />
+                    </svg>
+                </article>
+                <article class="metric-card metric-teal">
+                    <div class="metric-icon">▱</div>
+                    <div class="metric-content">
+                        <h2>Sleep Quality</h2>
+                        <p class="metric-value">6.5 <span>/ 10</span></p>
+                        <p class="metric-change positive">↓ 0.8% <span>Lower than last week</span></p>
+                    </div>
+                    <svg class="sparkline" viewBox="0 0 100 36" aria-hidden="true">
+                        <path d="M2 25 C15 27 17 18 27 19 S43 29 54 19 69 11 78 16 91 14 98 10" />
+                    </svg>
+                </article>
+                <article class="metric-card metric-blue">
+                    <div class="metric-icon">☑</div>
+                    <div class="metric-content">
+                        <h2>Task Completion</h2>
+                        <p class="metric-value">72<span>%</span></p>
+                        <p class="metric-change">↑ 12% <span>Better than last week</span></p>
+                    </div>
+                    <svg class="sparkline" viewBox="0 0 100 36" aria-hidden="true">
+                        <path d="M2 27 C12 19 18 30 27 22 S40 17 48 22 62 28 70 18 84 26 92 12 97 10 99 5" />
+                    </svg>
+                </article>
+            </section>
+
+            <section class="content-grid" aria-label="Dashboard details">
+                <article class="panel trend-panel" id="academics">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon purple-text">▥</span>Stress Level Trend</h2>
+                        <div class="segmented-control" role="group" aria-label="Trend time range"><button
+                                class="is-selected" type="button" data-range="7D">7D</button><button type="button"
+                                data-range="14D">14D</button><button type="button" data-range="30D">30D</button></div>
+                    </div>
+                    <div class="chart">
+                        <div class="chart-y-labels">
+                            <span>10</span><span>8</span><span>6</span><span>4</span><span>2</span>
+                        </div>
+                        <div class="chart-area">
+                            <svg viewBox="0 0 600 250" preserveAspectRatio="none" role="img"
+                                aria-label="Stress levels stayed between 5.8 and 7.5 over the last seven days">
+                                <defs>
+                                    <linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0%" stop-color="#8b42ff" stop-opacity=".32" />
+                                        <stop offset="100%" stop-color="#8b42ff" stop-opacity=".02" />
+                                    </linearGradient>
+                                </defs>
+                                <path class="chart-gridline"
+                                    d="M0 0H600 M0 50H600 M0 100H600 M0 150H600 M0 200H600 M0 250H600 M0 0V250 M100 0V250 M200 0V250 M300 0V250 M400 0V250 M500 0V250 M600 0V250" />
+                                <path class="chart-area-fill"
+                                    d="M0 105 C40 112 62 126 100 120 S166 82 200 91 265 115 300 102 366 68 400 74 465 101 500 91 565 72 600 60 V250 H0Z" />
+                                <path class="chart-line"
+                                    d="M0 105 C40 112 62 126 100 120 S166 82 200 91 265 115 300 102 366 68 400 74 465 101 500 91 565 72 600 60" />
+                                <g class="chart-points">
+                                    <circle cx="0" cy="105" r="5" />
+                                    <circle cx="100" cy="120" r="5" />
+                                    <circle cx="200" cy="91" r="5" />
+                                    <circle cx="300" cy="102" r="5" />
+                                    <circle cx="400" cy="74" r="5" />
+                                    <circle cx="500" cy="91" r="5" />
+                                    <circle cx="600" cy="60" r="5" />
+                                </g>
+                            </svg>
+                            <span class="chart-tooltip">7.5<small>Today</small></span>
+                        </div>
+                    </div>
+                    <div class="chart-x-labels"><span>03 Oct</span><span>04 Oct</span><span>05 Oct</span><span>06
+                            Oct</span><span>07 Oct</span><span>08 Oct</span><span>09 Oct</span></div>
+                </article>
+
+                <article class="panel breakdown-panel">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon blue-text">▣</span>Pressure Breakdown</h2>
+                        <span class="tag">Sample split</span>
+                    </div>
+                    <div class="breakdown-content">
+                        <div class="donut">
+                            <div><span>Total<br>Pressure</span><strong>7.5 <small>/ 10</small></strong></div>
+                        </div>
+                        <ul class="legend">
+                            <li><button type="button" data-topic="academic"><i
+                                        class="legend-pink"></i><span>Academic</span><strong>35%</strong></button></li>
+                            <li><button type="button" data-topic="academic"><i
+                                        class="legend-yellow"></i><span>Assignments</span><strong>20%</strong></button>
+                            </li>
+                            <li><button type="button" data-topic="future"><i
+                                        class="legend-cyan"></i><span>Career/Future</span><strong>15%</strong></button>
+                            </li>
+                            <li><button type="button" data-topic="future"><i
+                                        class="legend-blue"></i><span>Financial</span><strong>10%</strong></button></li>
+                            <li><button type="button" data-topic="future"><i
+                                        class="legend-purple"></i><span>Social</span><strong>10%</strong></button></li>
+                            <li><button type="button" data-topic="future"><i
+                                        class="legend-violet"></i><span>Personal</span><strong>10%</strong></button>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="panel insights-panel" id="insights">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon cyan-text">✧</span>Wellbeing Insights</h2><span class="tag">Local
+                            guidance</span>
+                    </div>
+                    <div class="insight-list">
+                        <div class="insight insight-alert"><span class="insight-emoji">!</span>
+                            <div><strong>Your stress is slightly high</strong>
+                                <p>Try a 5-minute breathing exercise<br class="wide-only"> or short walk. It really
+                                    helps!</p>
+                            </div>
+                        </div>
+                        <div class="insight insight-sleep"><span class="insight-emoji">☾</span>
+                            <div><strong>Your sleep quality has decreased</strong>
+                                <p>Aim for 7–8 hours of sleep. Avoid<br class="wide-only"> screens before bed.</p>
+                            </div>
+                        </div>
+                        <div class="insight insight-good"><span class="insight-emoji">◎</span>
+                            <div><strong>Good progress on tasks!</strong>
+                                <p>You're 12% ahead this week.<br class="wide-only"> Keep it up!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="button button-primary report-button" href="#journal">View Full Report <span>→</span></a>
+                </article>
+
+                <article class="panel awareness-panel" id="wellbeing">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon yellow-text">✦</span>Pressure Awareness</h2>
+                        <span class="tag">Sample baseline</span>
+                    </div>
+                    <p class="awareness-intro">Pressure is information, not a measure of your worth. These sample
+                        pressure points can help you notice what feels heavy and choose one small next step.</p>
+                    <div class="pressure-points">
+                        <button class="pressure-point pressure-academic" type="button" data-topic="academic">
+                            <span class="pressure-point-icon">▤</span><span><strong>Academic
+                                    load</strong><small>Deadlines, exams &amp;
+                                    expectations</small></span><b>7.5<small>/10</small></b>
+                        </button>
+                        <button class="pressure-point pressure-sleep" type="button" data-topic="sleep">
+                            <span class="pressure-point-icon">☾</span><span><strong>Rest &amp;
+                                    recovery</strong><small>Sleep, energy &amp; taking
+                                    breaks</small></span><b>6.5<small>/10</small></b>
+                        </button>
+                        <button class="pressure-point pressure-future" type="button" data-topic="future">
+                            <span class="pressure-point-icon">✧</span><span><strong>Future
+                                    uncertainty</strong><small>Career plans &amp;
+                                    comparison</small></span><b>5.8<small>/10</small></b>
+                        </button>
+                    </div>
+                    <div class="awareness-footer">
+                        <p><strong>Try a reset:</strong> relax your shoulders, breathe in slowly, and name one small
+                            next step.</p>
+                        <button class="button breathing-button" type="button" data-action="breathing">Start 5-minute
+                            reset</button>
+                    </div>
+                </article>
+
+                <article class="panel focus-panel" id="focus">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon teal-text">◎</span>Current Focus <span
+                                class="target-icon">🎯</span></h2>
+                    </div>
+                    <div class="focus-content">
+                        <div class="progress-ring">
+                            <div><strong>72%</strong><span>Productivity</span></div>
+                        </div>
+                        <div class="focus-breakdown">
+                            <p>You're focusing<br>well, but don't forget<br>to take breaks!</p>
+                            <div class="progress-row"><span>Study</span>
+                                <div><i style="width:72%"></i></div><b>72%</b>
+                            </div>
+                            <div class="progress-row orange"><span>Assignments</span>
+                                <div><i style="width:68%"></i></div><b>68%</b>
+                            </div>
+                            <div class="progress-row pink"><span>Personal</span>
+                                <div><i style="width:45%"></i></div><b>45%</b>
+                            </div>
+                            <div class="progress-row blue"><span>Rest</span>
+                                <div><i style="width:60%"></i></div><b>60%</b>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="panel tasks-panel" id="planner">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon teal-text">☑</span>Today's Tasks</h2><span
+                            class="tag task-count">3/6</span>
+                    </div>
+                    <ul class="task-list">
+                        <li class="task-item is-done"><label><input type="checkbox" checked><span
+                                    class="custom-checkbox"></span><span class="task-name">Complete DSA practice (2
+                                    hrs)</span></label><time>10:00 AM</time></li>
+                        <li class="task-item is-done"><label><input type="checkbox" checked><span
+                                    class="custom-checkbox"></span><span class="task-name">College assignment
+                                    (Report)</span></label><time>12:00 PM</time></li>
+                        <li class="task-item"><label><input type="checkbox"><span class="custom-checkbox"></span><span
+                                    class="task-name">Watch React JS tutorial</span></label><time>03:00 PM</time></li>
+                        <li class="task-item"><label><input type="checkbox"><span class="custom-checkbox"></span><span
+                                    class="task-name">Read 1 chapter (Book)</span></label><time>07:00 PM</time></li>
+                        <li class="task-item"><label><input type="checkbox"><span class="custom-checkbox"></span><span
+                                    class="task-name">Gym / Workout</span></label><time>08:00 PM</time></li>
+                        <li class="task-item"><label><input type="checkbox"><span class="custom-checkbox"></span><span
+                                    class="task-name">Plan tomorrow</span></label><time>10:00 PM</time></li>
+                    </ul>
+                </article>
+
+                <article class="quote-card" id="journal">
+                    <div class="quote-mark">“</div>
+                    <blockquote>“Pressure is a part of the process,<br>not the end of the story.”</blockquote>
+                    <p>— Keep going, you got this.</p>
+                    <div class="quote-silhouette" aria-hidden="true">◆</div>
+                </article>
+
+                <article class="panel week-panel" id="sleep-tracker">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon blue-text">▦</span>This Week</h2>
+                    </div>
+                    <div class="week-stats" id="week-stats">
+                        <div><span>▣</span><small>Study Hours</small><strong>18.5 <i>↑ 20%</i></strong></div>
+                        <div><span>▯</span><small>Screen Time</small><strong>9.2 hrs <i>↓ 15%</i></strong></div>
+                        <div><span>⚒</span><small>Active Time</small><strong>4.3 hrs <i>↑ 12%</i></strong></div>
+                        <button class="sleep-stat" type="button" data-action="sleep"><span>☾</span><small>Last night's
+                                sleep</small><strong id="sleep-summary">Log sleep</strong></button>
+                    </div>
+                </article>
+
+                <article class="panel mood-panel">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon blue-text">☻</span>Mood Tracker</h2><button class="tag mood-range"
+                            type="button">This Week⌄</button>
+                    </div>
+                    <div class="mood-days" aria-label="Select your mood for each day"><button class="mood-day"
+                            type="button" data-day="Mon"
+                            aria-label="Monday mood: unhappy"><span>☹</span><small>Mon</small><b>5</b></button><button
+                            class="mood-day" type="button" data-day="Tue"
+                            aria-label="Tuesday mood: neutral"><span>😐</span><small>Tue</small><b>6</b></button><button
+                            class="mood-day" type="button" data-day="Wed"
+                            aria-label="Wednesday mood: unsure"><span>😕</span><small>Wed</small><b>5</b></button><button
+                            class="mood-day" type="button" data-day="Thu"
+                            aria-label="Thursday mood: happy"><span>☺</span><small>Thu</small><b>7</b></button><button
+                            class="mood-day" type="button" data-day="Fri"
+                            aria-label="Friday mood: sad"><span>☻</span><small>Fri</small><b>4</b></button><button
+                            class="mood-day" type="button" data-day="Sat"
+                            aria-label="Saturday mood: okay"><span>☻</span><small>Sat</small><b>6</b></button><button
+                            class="mood-day" type="button" data-day="Sun"
+                            aria-label="Sunday mood: happy"><span>☺</span><small>Sun</small><b>8</b></button></div>
+                </article>
+
+                <article class="panel quick-panel" id="settings">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon cyan-text">ϟ</span>Quick Actions</h2>
+                    </div>
+                    <div class="quick-actions"><button type="button" data-action="task"><span>＋</span>Add
+                            Task</button><button type="button" data-action="mood"><span>☻</span>Log Mood</button><button
+                            type="button" data-action="sleep"><span>☾</span>Track Sleep</button><button type="button"
+                            data-action="journal"><span>✎</span>Write Journal</button><button type="button"
+                            data-action="settings"><span>⚙</span>Preferences</button></div>
+                </article>
+            </section>
+            <p class="privacy-note">Demo trends are illustrative. Tasks, mood check-ins, sleep logs, and journal entries
+                are saved only in this browser—there is no backend connection.</p>
+        </main>
+    </div>
+    <dialog class="app-dialog" aria-labelledby="dialog-title">
+        <div class="dialog-header">
+            <h2 id="dialog-title"></h2><button class="dialog-close" type="button" aria-label="Close dialog">×</button>
+        </div>
+        <div class="dialog-content"></div>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="script.js"></script>
+    <script src="dashboard.js" defer></script>
+</body>
+
+</html>

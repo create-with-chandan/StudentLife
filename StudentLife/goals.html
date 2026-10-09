@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071326">
+    <title>Goals | StudentLife</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="goals">
+    <canvas class="webgl" aria-hidden="true"></canvas>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="index.html" aria-label="StudentLife dashboard"><span
+                    class="brand-mark">⌁</span><span><strong>StudentLife</strong><small>Less Pressure, More
+                        Progress</small></span></a>
+            <nav class="navigation" aria-label="Main navigation">
+                <a class="nav-link" href="index.html"><span class="nav-icon">◈</span>Dashboard</a><a class="nav-link"
+                    href="academics.html"><span class="nav-icon">♧</span>Academics</a><a class="nav-link"
+                    href="planner.html"><span class="nav-icon">▣</span>Study Planner</a><a class="nav-link"
+                    href="wellbeing.html"><span class="nav-icon">♡</span>Mental Health</a><a class="nav-link"
+                    href="sleep.html"><span class="nav-icon">☾</span>Sleep Tracker</a><a class="nav-link is-active"
+                    href="goals.html" aria-current="page"><span class="nav-icon">⚒</span>Goals</a><a class="nav-link"
+                    href="journal.html"><span class="nav-icon">▤</span>Journal</a><a class="nav-link"
+                    href="settings.html"><span class="nav-icon">⚙</span>Settings</a>
+            </nav>
+            <section class="encouragement">
+                <div class="mountain-art" aria-hidden="true"><span>⚑</span></div>
+                <h2>You're doing<br>better than you think.</h2>
+                <p>Small steps every day<br>lead to big results.</p><a class="button button-small"
+                    href="planner.html">Make a plan <span>→</span></a>
+            </section>
+        </aside>
+        <main class="dashboard standalone-page">
+            <header class="topbar">
+                <div class="welcome"><span class="sun-icon" aria-hidden="true">✧</span>
+                    <div>
+                        <h1>Your goals</h1>
+                        <p>Celebrate progress in small, meaningful steps.</p>
+                    </div>
+                </div>
+                <div class="top-actions">
+                    <div class="date-display"><span class="action-icon">▦</span><span><strong
+                                data-current-date></strong><small data-current-time></small></span></div><button
+                        class="icon-button notification-button" type="button"
+                        aria-label="Wellbeing reminder">♧</button><a class="profile-avatar" href="settings.html"
+                        aria-label="Profile and settings">C</a>
+                </div>
+            </header>
+            <section class="page-intro"><span class="page-eyebrow">AIM FOR WHAT MATTERS</span>
+                <h2>Turn a big intention into a next step.</h2>
+                <p>Goals are yours to shape. Add one, update it as life changes, and mark milestones when they feel
+                    right.</p>
+            </section>
+            <section class="section-layout">
+                <article class="panel standalone-panel">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon teal-text">◎</span>My goals</h2><span class="tag"
+                            id="goal-count">0 goals</span>
+                    </div>
+                    <form class="inline-form" id="goal-form"><label class="sr-only" for="goal-input">Add a personal
+                            goal</label><input id="goal-input" name="goal" maxlength="100" required
+                            placeholder="e.g. Take a screen break after studying"><button
+                            class="button button-primary inline-button" type="submit">Add goal <span>＋</span></button>
+                    </form>
+                    <ul class="goal-list" id="goal-list"></ul>
+                    <div class="empty-state" id="goal-empty"><span>✦</span><strong>Start with one kind
+                            intention.</strong>
+                        <p>Goals can be about rest, learning, or anything important to you.</p>
+                    </div>
+                </article>
+                <article class="panel standalone-panel">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon purple-text">✧</span>Make goals feel doable</h2>
+                    </div>
+                    <div class="tip-list">
+                        <div><b>01</b><span>Choose something you can influence.</span></div>
+                        <div><b>02</b><span>Break it into a first step that takes less than 15 minutes.</span></div>
+                        <div><b>03</b><span>Adjust the goal when your needs or schedule change.</span></div>
+                    </div>
+                    <a class="button button-primary page-button" href="planner.html">Add a next step to planner
+                        <span>→</span></a>
+                </article>
+            </section>
+            <p class="privacy-note">Your goals are saved in this browser only. Progress is personal; there is no score
+                to compare.</p>
+        </main>
+    </div>
+    <dialog class="app-dialog" aria-labelledby="dialog-title">
+        <div class="dialog-header">
+            <h2 id="dialog-title"></h2><button class="dialog-close" type="button" aria-label="Close dialog">×</button>
+        </div>
+        <div class="dialog-content"></div>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="script.js"></script>
+    <script src="page.js" defer></script>
+</body>
+
+</html>

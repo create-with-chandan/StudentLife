@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071326">
+    <title>Academics | StudentLife</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="academics">
+    <canvas class="webgl" aria-hidden="true"></canvas>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="index.html" aria-label="StudentLife dashboard"><span
+                    class="brand-mark">⌁</span><span><strong>StudentLife</strong><small>Less Pressure, More
+                        Progress</small></span></a>
+            <nav class="navigation" aria-label="Main navigation">
+                <a class="nav-link" href="index.html"><span class="nav-icon">◈</span>Dashboard</a>
+                <a class="nav-link is-active" href="academics.html" aria-current="page"><span
+                        class="nav-icon">♧</span>Academics</a>
+                <a class="nav-link" href="planner.html"><span class="nav-icon">▣</span>Study Planner</a>
+                <a class="nav-link" href="wellbeing.html"><span class="nav-icon">♡</span>Mental Health</a>
+                <a class="nav-link" href="sleep.html"><span class="nav-icon">☾</span>Sleep Tracker</a>
+                <a class="nav-link" href="goals.html"><span class="nav-icon">⚒</span>Goals</a>
+                <a class="nav-link" href="journal.html"><span class="nav-icon">▤</span>Journal</a>
+                <a class="nav-link" href="settings.html"><span class="nav-icon">⚙</span>Settings</a>
+            </nav>
+            <section class="encouragement">
+                <div class="mountain-art" aria-hidden="true"><span>⚑</span></div>
+                <h2>You're doing<br>better than you think.</h2>
+                <p>Small steps every day<br>lead to big results.</p><a class="button button-small"
+                    href="goals.html">Keep Going <span>→</span></a>
+            </section>
+        </aside>
+        <main class="dashboard standalone-page">
+            <header class="topbar">
+                <div class="welcome"><span class="sun-icon" aria-hidden="true">☼</span>
+                    <div>
+                        <h1>Academics</h1>
+                        <p>Make your workload feel more manageable, one step at a time.</p>
+                    </div>
+                </div>
+                <div class="top-actions">
+                    <div class="date-display"><span class="action-icon">▦</span><span><strong
+                                data-current-date></strong><small data-current-time></small></span></div><button
+                        class="icon-button notification-button" type="button"
+                        aria-label="Wellbeing reminder">♧</button><a class="profile-avatar" href="settings.html"
+                        aria-label="Profile and settings">C</a>
+                </div>
+            </header>
+            <section class="page-intro"><span class="page-eyebrow">YOUR STUDY SPACE</span>
+                <h2>Learn at a pace that works for you.</h2>
+                <p>Use this page to notice patterns—not to judge yourself. The figures below are illustrative until you
+                    add your own entries.</p>
+            </section>
+            <section class="section-layout">
+                <article class="panel standalone-panel academic-trend">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon purple-text">▥</span>Study pressure trend</h2>
+                        <div class="segmented-control" role="group" aria-label="Select trend range"><button
+                                class="is-selected" type="button" data-academic-range="7D">7D</button><button
+                                type="button" data-academic-range="14D">14D</button><button type="button"
+                                data-academic-range="30D">30D</button></div>
+                    </div>
+                    <div class="chart academic-chart">
+                        <div class="chart-y-labels">
+                            <span>10</span><span>8</span><span>6</span><span>4</span><span>2</span></div>
+                        <div class="chart-area"><svg viewBox="0 0 600 250" preserveAspectRatio="none" role="img"
+                                aria-label="Illustrative study pressure trend">
+                                <path class="chart-gridline"
+                                    d="M0 0H600 M0 50H600 M0 100H600 M0 150H600 M0 200H600 M0 250H600 M0 0V250 M100 0V250 M200 0V250 M300 0V250 M400 0V250 M500 0V250 M600 0V250" />
+                                <path class="chart-area-fill"
+                                    d="M0 105 L100 120 L200 91 L300 102 L400 74 L500 91 L600 60 V250 H0Z" />
+                                <path class="chart-line" d="M0 105 L100 120 L200 91 L300 102 L400 74 L500 91 L600 60" />
+                                <g class="chart-points">
+                                    <circle cx="0" cy="105" r="5" />
+                                    <circle cx="100" cy="120" r="5" />
+                                    <circle cx="200" cy="91" r="5" />
+                                    <circle cx="300" cy="102" r="5" />
+                                    <circle cx="400" cy="74" r="5" />
+                                    <circle cx="500" cy="91" r="5" />
+                                    <circle cx="600" cy="60" r="5" />
+                                </g>
+                            </svg><span class="chart-tooltip">7.5<small>Today</small></span></div>
+                    </div>
+                    <div class="chart-x-labels">
+                        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                    </div>
+                </article>
+                <article class="panel standalone-panel">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon teal-text">◎</span>Keep the next step small</h2>
+                    </div>
+                    <p class="panel-copy">A clear, short study block can feel easier to start than a long, open-ended
+                        session.</p>
+                    <div class="tip-list">
+                        <div><b>01</b><span>Pick one topic—not the whole subject.</span></div>
+                        <div><b>02</b><span>Set a 25-minute focus block and a short break.</span></div>
+                        <div><b>03</b><span>Write down what you finished before moving on.</span></div>
+                    </div>
+                    <a class="button button-primary page-button" href="planner.html">Plan a study session
+                        <span>→</span></a>
+                </article>
+                <article class="panel standalone-panel">
+                    <div class="panel-heading">
+                        <h2><span class="heading-icon blue-text">▣</span>Common pressure points</h2><span
+                            class="tag">Tap for ideas</span>
+                    </div>
+                    <div class="pressure-points page-pressure-points"><button class="pressure-point" type="button"
+                            data-topic="academic"><span class="pressure-point-icon">▤</span><span><strong>Exams &amp;
+                                    deadlines</strong><small>Prioritise the next
+                                    deliverable</small></span><b>→</b></button><button
+                            class="pressure-point pressure-future" type="button" data-topic="future"><span
+                                class="pressure-point-icon">✧</span><span><strong>Expectations</strong><small>Ask for
+                                    clarity or support</small></span><b>→</b></button><button
+                            class="pressure-point pressure-sleep" type="button" data-topic="sleep"><span
+                                class="pressure-point-icon">☾</span><span><strong>Study fatigue</strong><small>Rest is
+                                    part of learning</small></span><b>→</b></button></div>
+                </article>
+            </section>
+            <p class="privacy-note">Study trends are sample data. Your personal entries stay in this browser; no backend
+                is connected.</p>
+        </main>
+    </div>
+    <dialog class="app-dialog" aria-labelledby="dialog-title">
+        <div class="dialog-header">
+            <h2 id="dialog-title"></h2><button class="dialog-close" type="button" aria-label="Close dialog">×</button>
+        </div>
+        <div class="dialog-content"></div>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="script.js"></script>
+    <script src="page.js" defer></script>
+</body>
+
+</html>
